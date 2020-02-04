@@ -2,9 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const dotenv = require('dotenv').config();
+
 
 const app = express();
-
 const candidateRoute = require('./api/routes/candidates');
 
 //-------------- Database Connection ----------------------------------------
@@ -45,6 +46,8 @@ app.use((req, res, next) => {
 
 
 app.use('/candidates', candidateRoute);
+
+
 
 app.use((req, res, next) => {
     const error = new Error("Not found");

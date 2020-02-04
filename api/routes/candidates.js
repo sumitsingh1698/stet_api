@@ -1,12 +1,10 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const hash = require('bcrypt');
 const router = express.Router();
 
 const CandidateController = require("../controllers/candidate");
-router.get('/',(req, res, next) => {
-  
-});
+
+router.get('/',CandidateController.get_cadidate_list);
+
 router.post('/signup',CandidateController.add_candidate);
 
 router.delete('/:candidateId', (req, res, next) => {

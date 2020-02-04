@@ -136,10 +136,10 @@ exports.login_candidate = (req, res, next) => {
 //----------------------- Get all candidate list ----------------------------//
 
 
-exports.get_candidate_list = (req, res, next) => {  
+exports.get_cadidate_list = (req, res, next) => {  
  Candidate.find().exec().then(result => {
     res.status(200).json({
       result: result
     });
- })
+ });
 }
