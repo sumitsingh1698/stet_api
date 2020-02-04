@@ -123,7 +123,7 @@ exports.login_candidate = (req, res, next) => {
          }
          res.status(401).json({
             message: "Password Incorrect"
-         })
+         });
       });
 
    }
@@ -131,4 +131,15 @@ exports.login_candidate = (req, res, next) => {
    ).catch(err => {
       console.log(err);
    })
+}
+
+//----------------------- Get all candidate list ----------------------------//
+
+
+exports.get_candidate_list = (req, res, next) => {  
+ Candidate.find().exec().then(result => {
+    res.status(200).json({
+      result: result
+    });
+ })
 }
