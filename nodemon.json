@@ -1,0 +1,9 @@
+{
+    "env": {
+        "MONGO_ATLAS_URL":"mongodb+srv://",
+        "MONGO_ATLAS_CLUSTER":"@stet-api-2xbrm.mongodb.net/test?retryWrites=true&w=majority",
+        "MONGO_ATLAS_UN":"sumit1698",
+        "MONGO_ATLAS_PW": "sumit1698",
+        "JWT_KEY": "secret"
+    }
+}
