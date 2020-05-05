@@ -6,7 +6,7 @@ const CandidateController = require("../controllers/candidate");
 router.get('/',CandidateController.get_cadidate_list);
 router.get('/createdby',(req,res, next) =>{
   res.status(201).json({
-     preater : "Sumit Kumar",
+     creater : "Sumit Kumar",
      project : "STATE TEACHER ELIGIBILITY TEST",
      languageused : "NODE JS"
   
