@@ -4,7 +4,15 @@ const router = express.Router();
 const CandidateController = require("../controllers/candidate");
 
 router.get('/',CandidateController.get_cadidate_list);
+router.get('/createdby',(req,res, next) =>{
+  res.status(201).json({
+     preater : "Sumit Kumar",
+     project : "STATE TEACHER ELIGIBILITY TEST",
+     languageused : "NODE JS"
+  
+  });
 
+});
 router.post('/signup',CandidateController.add_candidate);
 
 router.delete('/:candidateId', (req, res, next) => {
